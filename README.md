@@ -38,29 +38,13 @@ Para que se vea la imagen de fondo del hero, coloca **Auto.png** en la carpeta *
 
 ## Desplegar en GitHub Pages
 
-El proyecto está configurado para publicarse en [consultora.automatizacion/consultora.automatizacion](https://github.com/consultoraautomatizacion/consultora.automatizacion).
+### Activar la página (solo una vez)
 
-### Pasos
+1. Abre el repo: **[consultora.automatizacion/consultora.automatizacion](https://github.com/consultoraautomatizacion/consultora.automatizacion)**.
+2. Ve a **Settings** (Configuración) → en el menú izquierdo **Pages**.
+3. En **Build and deployment**, en **Source** elige **GitHub Actions**.
+4. No hace falta guardar nada más: con eso ya está activado.
 
-1. **Conectar el repo y subir el código** (si aún no está en GitHub):
-   ```bash
-   git remote add origin https://github.com/consultoraautomatizacion/consultora.automatizacion.git
-   git branch -M main
-   git add .
-   git commit -m "Sitio Consultora de Automatización"
-   git push -u origin main
-   ```
+La primera vez que se activa (o tras el próximo `git push` a `main`), se ejecutará el workflow **Deploy to GitHub Pages**, construirá el sitio y lo publicará. Puede tardar 1–2 minutos. Puedes ver el progreso en la pestaña **Actions**.
 
-2. **Activar GitHub Pages con GitHub Actions**
-   - En el repo: **Settings** → **Pages**.
-   - En **Build and deployment**, **Source** elige **GitHub Actions**.
-
-3. **Despliegue automático**
-   - Cada vez que hagas `git push` a `main`, se ejecutará el workflow que construye la app y la publica en GitHub Pages.
-   - La primera vez puede tardar 1–2 minutos. Luego verás la URL en **Settings** → **Pages** o en la pestaña **Actions** (workflow "Deploy to GitHub Pages").
-
-4. **URL del sitio**
-   - Será: **https://consultoraautomatizacion.github.io/consultora.automatizacion/**
-# consultora.automatizacion
-# consultora.automatizacion
-# consultora.automatizacion
+**URL del sitio:** **https://consultoraautomatizacion.github.io/consultora.automatizacion/**
