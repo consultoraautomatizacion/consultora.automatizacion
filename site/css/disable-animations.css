@@ -1,0 +1,469 @@
+/**
+ * Desactiva todas las animaciones continuas del template para evitar vibración.
+ * Cargar después de style.css y responsive.css.
+ */
+
+/* Ocultar cursor personalizado que sigue al ratón (evita sensación de vibración) */
+.cursor,
+.cursor-follower {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+/* Parallax SVG animado (move-forever) */
+.parallax > use,
+.parallax use {
+	animation: none !important;
+	-webkit-animation: none !important;
+	-moz-animation: none !important;
+	-ms-animation: none !important;
+	-o-animation: none !important;
+}
+
+/* Evitar sacudidas horizontales (sin bloquear el scroll vertical) */
+html {
+	overflow-x: hidden;
+	scroll-behavior: auto;
+	overflow-y: scroll;
+	height: auto;
+	min-height: 100%;
+	touch-action: pan-y;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior: auto;
+	height: auto;
+	min-height: 100%;
+	position: relative;
+	touch-action: pan-y;
+}
+
+.page-wrapper {
+	overflow-x: hidden !important;
+	overflow-y: visible !important;
+	min-height: 100%;
+}
+
+.float-bob,
+.float-bob-x,
+.float-bob-y,
+.flaot-bob-x,
+.flaot-bob-y,
+.zoominout,
+.zoominout-2,
+.img-bounce,
+.zoom-fade,
+.zoom-fade-2,
+.zoom-fade-3 {
+	animation: none !important;
+	-webkit-animation: none !important;
+	-moz-animation: none !important;
+	-ms-animation: none !important;
+	-o-animation: none !important;
+}
+
+/* Evitar que transform en keyframes mueva elementos */
+.feature-one__color-overly-1,
+.feature-one__color-overly-2,
+.feature-one__color-overly-3,
+.feature-one__start-1,
+.feature-one__start-2,
+.feature-one__start-3,
+.feature-one__start-4,
+.feature-one__start-5,
+.feature-one__start-6,
+.feature-one__start-7,
+.feature-one__start-8,
+.solutions-two__shape-2,
+.brand-one__shape-1,
+.brand-one__shape-2,
+.brand-one__shape-3,
+.collaboration-one__star-1,
+.collaboration-one__star-2,
+.collaboration-one__star-3,
+.collaboration-one__star-4,
+.collaboration-one__shape-1,
+.pricing-one__shape-1,
+.pricing-one__shape-2,
+.free-trail__shape-1,
+.free-trail__start-1,
+.free-trail__start-2,
+.free-trail__start-3,
+.free-trail__start-4,
+.main-footer__shape-1 {
+	animation: none !important;
+	-webkit-animation: none !important;
+	-moz-animation: none !important;
+	-ms-animation: none !important;
+	-o-animation: none !important;
+	transform: none !important;
+	-webkit-transform: none !important;
+	-moz-transform: none !important;
+	-ms-transform: none !important;
+	-o-transform: none !important;
+}
+
+/* Último recurso: desactivar TODAS las animaciones CSS de la página */
+.page-wrapper,
+.page-wrapper *,
+.page-wrapper *::before,
+.page-wrapper *::after {
+	animation: none !important;
+	-webkit-animation: none !important;
+	-moz-animation: none !important;
+	-ms-animation: none !important;
+	-o-animation: none !important;
+}
+
+/* Vídeo de fondo en hero (Recursos) */
+.feature-one--video-bg {
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.feature-one__bg-video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+.feature-one--video-bg .container {
+	position: relative;
+	z-index: 1;
+}
+/* Fondo/overlay sobre el vídeo para que el texto y los iconos se lean bien */
+.feature-one--video-bg::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.72) 0%,
+		rgba(0, 0, 0, 0.82) 25%,
+		rgba(0, 0, 0, 0.88) 50%,
+		rgba(0, 0, 0, 0.82) 75%,
+		rgba(0, 0, 0, 0.72) 100%
+	);
+	z-index: 0.5;
+	pointer-events: none;
+}
+
+/* Tarjetas y caja central más opacas sobre el vídeo para que se lean bien */
+.feature-one--video-bg .feature-one__single {
+	background: rgba(18, 18, 42, 0.92);
+	border-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(12px);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.feature-one--video-bg .feature-one__cpu-icon-box {
+	background-color: rgba(18, 18, 42, 0.9);
+	border-color: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(12px);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Título y subtítulo con sombra para mejor contraste sobre el vídeo */
+.feature-one--video-bg .feature-one__title {
+	text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.feature-one--video-bg .feature-one__subtitle {
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* "Soluciones" y caja de rating más legibles */
+.feature-one--video-bg .feature-one__ai-pack h3 {
+	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.feature-one--video-bg .feature-one__rating-text {
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feature-one--video-bg .feature-one__title-2 a {
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Evitar que el encabezado fijo trabe el scroll: la rueda del ratón pasa al documento.
+   Solo los enlaces y botones reciben clic; el resto del header no captura eventos. */
+.main-header,
+.main-header * {
+	pointer-events: none;
+}
+.main-header a,
+.main-header button,
+.main-header .navbar-toggler,
+.main-header .mobile-nav-toggler,
+.main-header-one__logo-box a,
+.main-header__login-sing-up a,
+.main-header .thm-btn {
+	pointer-events: auto;
+}
+
+/* Márgenes y padding en secciones para que el texto no quede al ras ni cortado */
+.page-wrapper .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.section-title {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.section-title__title,
+.section-title__text {
+	margin-left: 0;
+	margin-right: 0;
+	max-width: 100%;
+}
+
+/* Hero */
+.feature-one .container {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.feature-one__title,
+.feature-one__subtitle {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* Soluciones */
+.solutions-two .container,
+.solutions-two__content-one,
+.solutions-two__content-two-single,
+.solutions-two__content-three {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.solutions-two__content-one-title-box h3,
+.solutions-two__content-two-title-box h3,
+.solutions-two__content-three-title-box h3,
+.solutions-two__content-one-text-1,
+.solutions-two__content-two-text-1,
+.solutions-two__content-three-text-1 {
+	padding-right: 8px;
+}
+
+/* Marcas / Brand */
+.brand-one .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.brand-one__title {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* Cómo trabajamos / Collaboration */
+.collaboration-one .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.collaboration-one__title,
+.collaboration-one__sub-title {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* Casos de uso / Testimonials */
+.testimonial-one .container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.testimonial-one__single {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.testimonial-one__title,
+.testimonial-one__text {
+	padding-right: 4px;
+}
+
+/* FAQ */
+.faq-one .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+/* Free trail / CTA */
+.free-trail .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.free-trail__text {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* Footer */
+.main-footer .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.footer-widget__about-text,
+.footer-widget__company-list a,
+.footer-widget__resources-list a {
+	padding-right: 8px;
+}
+
+/* Página de contacto */
+.page-title .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.page-title__title,
+.page-title__text {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.contact-one .container {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+/* Responsive: más margen en móvil para que no se corte */
+@media (max-width: 767px) {
+	.page-wrapper .container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.feature-one__title,
+	.feature-one__subtitle {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.solutions-two__content-one,
+	.solutions-two__content-two-single,
+	.solutions-two__content-three {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.testimonial-one__single {
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+}
+
+/* Mensajes del formulario de contacto */
+.contact-one .ajax-response {
+	display: block;
+	margin-top: 1rem;
+	padding: 0.75rem 1rem;
+	border-radius: 6px;
+	font-size: 0.95rem;
+}
+.contact-one .ajax-response.success {
+	color: #0d5c0d;
+	background: #e6f4e6;
+	border: 1px solid #a3d9a3;
+}
+.contact-one .ajax-response.error {
+	color: #8b2020;
+	background: #fce8e8;
+	border: 1px solid #e8a0a0;
+}
+
+/* Forzar scroll fluido: anular overflow hidden del template en todos los anchos */
+@media only screen and (max-width: 1340px) {
+	.page-wrapper {
+		overflow-x: hidden !important;
+		overflow-y: visible !important;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.page-wrapper {
+		overflow-x: hidden !important;
+		overflow-y: visible !important;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.page-wrapper {
+		overflow-x: hidden !important;
+		overflow-y: visible !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.page-wrapper {
+		overflow-x: hidden !important;
+		overflow-y: visible !important;
+	}
+}
+
+/* ===== Soluciones a la medida: grid tipo bento (Mac) y efecto centro más grande ===== */
+.solutions-two__bento-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 14px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.solutions-two__bento-grid .solutions-two__content-three-img-single {
+	margin-bottom: 0;
+}
+
+.solutions-two__bento-grid .solutions-two__content-three-img {
+	aspect-ratio: 1;
+	transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.solutions-two__bento-grid .solutions-two__content-three-img-single--center .solutions-two__content-three-img {
+	transform: scale(1);
+}
+
+/* Cuando la sección está en el flujo (mitad del viewport), la central se agranda tipo Mac */
+.solutions-two.solutions-two--center-focus .solutions-two__content-three-img-single--center {
+	position: relative;
+	z-index: 2;
+}
+
+.solutions-two.solutions-two--center-focus .solutions-two__content-three-img-single--center .solutions-two__content-three-img {
+	transform: scale(1.35);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 991px) {
+	.solutions-two__bento-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.solutions-two.solutions-two--center-focus .solutions-two__content-three-img-single--center .solutions-two__content-three-img {
+		transform: scale(1.2);
+	}
+}
+
+@media (max-width: 575px) {
+	.solutions-two__bento-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.solutions-two__content-three-img-single--center {
+		grid-column: 1 / -1;
+		max-width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

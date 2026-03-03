@@ -1,0 +1,350 @@
+/**
+ * Ajuste de tamaños de iconos e imágenes de Recursos para evitar desbordamiento.
+ * Cargar después de style.css y responsive.css.
+ */
+
+/* ===== Logos (cabecera, móvil, footer) ===== */
+.main-header-one__logo-box a img,
+.main-header-one__logo-box img {
+	max-height: 48px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	display: block;
+}
+
+.mobile-menu .nav-logo img {
+	max-height: 44px;
+	max-width: 180px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	display: block;
+}
+
+.footer-widget__logo a img,
+.footer-widget__logo img {
+	max-height: 44px;
+	max-width: 200px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	display: block;
+}
+
+/* ===== Feature One (Hero) ===== */
+/* Iconos del hero sobre el vídeo: se mantienen en amarillo (no aplicar filtro negro) */
+
+/* Formas decorativas (estrellas/chips) */
+.feature-one__start-1 img,
+.feature-one__start-2 img,
+.feature-one__start-3 img,
+.feature-one__start-4 img,
+.feature-one__start-5 img,
+.feature-one__start-6 img,
+.feature-one__start-7 img,
+.feature-one__start-8 img {
+	max-width: 36px;
+	max-height: 36px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+}
+
+/* Icono central CPU/robot (caja 218x218) */
+.feature-one__cpu-icon-box img {
+	max-width: 100px;
+	max-height: 100px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+}
+
+/* Iconos de rating y envío */
+.feature-one__rating-icon img {
+	max-width: 32px;
+	max-height: 32px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+}
+
+/* ===== Solutions Two ===== */
+.solutions-two__shape-2 img,
+.solutions-two__content-two-shape-1 img {
+	max-width: 64px;
+	max-height: 64px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0);
+}
+
+/* Contenedores de imágenes de contenido: evitar desborde y mantener proporción */
+.solutions-two__content-one-img-box,
+.solutions-two__content-two-img-box {
+	max-width: 100%;
+	overflow: hidden;
+	border-radius: 16px;
+}
+
+.solutions-two__content-one-img,
+.solutions-two__content-two-img {
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.solutions-two__content-one-img img,
+.solutions-two__content-two-img img {
+	width: 100% !important;
+	max-width: 100%;
+	height: auto !important;
+	min-height: 200px;
+	max-height: 400px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+/* Galería "Soluciones a la medida": celdas cuadradas para que todas las imágenes tengan el mismo encuadre */
+.solutions-two__content-three-img {
+	aspect-ratio: 1;
+	overflow: hidden;
+}
+
+.solutions-two__content-three-img img {
+	width: 100% !important;
+	height: 100% !important;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+/* ===== Brand One (marcas/tecnologías) ===== */
+.brand-one__brand-img {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.brand-one__brand-img img {
+	max-width: 80px;
+	max-height: 44px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0);
+}
+
+.brand-one__shape-1 img,
+.brand-one__shape-2 img,
+.brand-one__shape-3 img {
+	max-width: 40px;
+	max-height: 40px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0);
+}
+
+/* ===== Collaboration One ===== */
+/* Iconos flotantes "Cómo trabajamos con vosotros": en amarillo */
+.collaboration-one__star-1 img,
+.collaboration-one__star-2 img,
+.collaboration-one__star-3 img,
+.collaboration-one__star-4 img {
+	max-width: 28px;
+	max-height: 28px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0) saturate(100%) invert(0.92) sepia(1) saturate(10000%) hue-rotate(25deg);
+}
+
+.collaboration-one__icon img {
+	max-width: 56px;
+	max-height: 56px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0) saturate(100%) invert(0.92) sepia(1) saturate(10000%) hue-rotate(25deg);
+}
+
+.collaboration-one__icon-shape-1 img {
+	max-width: 36px;
+	max-height: 36px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0) saturate(100%) invert(0.92) sepia(1) saturate(10000%) hue-rotate(25deg);
+}
+
+/* Cajas de iconos 72x72: limitar imagen interior */
+.collaboration-one__icon-1,
+.collaboration-one__icon-2,
+.collaboration-one__icon-3,
+.collaboration-one__icon-4,
+.collaboration-one__icon-5,
+.collaboration-one__icon-6,
+.collaboration-one__icon-7 {
+	overflow: hidden;
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+.collaboration-one__icon-1 img,
+.collaboration-one__icon-2 img,
+.collaboration-one__icon-3 img,
+.collaboration-one__icon-4 img,
+.collaboration-one__icon-5 img,
+.collaboration-one__icon-6 img,
+.collaboration-one__icon-7 img {
+	max-width: 44px;
+	max-height: 44px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0) saturate(100%) invert(0.92) sepia(1) saturate(10000%) hue-rotate(25deg);
+}
+
+/* ===== Testimonial One (casos de uso) ===== */
+.testimonial-one__client-img {
+	width: 64px;
+	height: 64px;
+	min-width: 64px;
+	min-height: 64px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.testimonial-one__client-img img {
+	width: 100% !important;
+	height: 100% !important;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.testimonial-one__icon img {
+	max-width: 28px;
+	max-height: 28px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0);
+}
+
+/* ===== Free Trail ===== */
+.free-trail__start-1 img,
+.free-trail__start-2 img,
+.free-trail__start-3 img,
+.free-trail__start-4 img {
+	max-width: 28px;
+	max-height: 28px;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain;
+	filter: brightness(0);
+}
+
+/* ===== Contenedores: evitar desbordamiento global ===== */
+.brand-one__list,
+.brand-one__list-2 {
+	flex-wrap: wrap;
+	gap: 12px;
+	justify-content: center;
+}
+
+.brand-one__list li,
+.brand-one__list-2 li {
+	flex: 0 0 auto;
+}
+
+.feature-one__main-content-box {
+	overflow: visible;
+}
+
+.feature-one__main-content-box .feature-one__list {
+	overflow: visible;
+}
+
+/* Iconos usados como fondo (background-image): mostrarlos en negro */
+.solutions-two__shape-1,
+.solutions-two__content-three-shape-1,
+.collaboration-one__shape-1,
+.collaboration-one__shape-2,
+.free-trail__shape-3,
+.page-title__shape-1 {
+	filter: brightness(0);
+}
+
+/* Responsive: reducir tamaños en tablets/móviles para evitar desborde */
+@media (max-width: 991px) {
+	.brand-one__brand-img img {
+		max-width: 64px;
+		max-height: 36px;
+	}
+	.feature-one__cpu-icon-box img {
+		max-width: 80px;
+		max-height: 80px;
+	}
+	.collaboration-one__icon-1 img,
+	.collaboration-one__icon-2 img,
+	.collaboration-one__icon-3 img,
+	.collaboration-one__icon-4 img,
+	.collaboration-one__icon-5 img,
+	.collaboration-one__icon-6 img,
+	.collaboration-one__icon-7 img {
+		max-width: 36px;
+		max-height: 36px;
+	}
+}
+
+@media (max-width: 767px) {
+	.feature-one__start-1 img,
+	.feature-one__start-2 img,
+	.feature-one__start-3 img,
+	.feature-one__start-4 img,
+	.feature-one__start-5 img,
+	.feature-one__start-6 img,
+	.feature-one__start-7 img,
+	.feature-one__start-8 img {
+		max-width: 28px;
+		max-height: 28px;
+	}
+	.brand-one__brand-img img {
+		max-width: 52px;
+		max-height: 30px;
+	}
+	.testimonial-one__client-img {
+		width: 56px;
+		height: 56px;
+		min-width: 56px;
+		min-height: 56px;
+	}
+	/* Imágenes de contenido más bajas en móvil */
+	.solutions-two__content-one-img img,
+	.solutions-two__content-two-img img {
+		max-height: 280px;
+		min-height: 160px;
+	}
+	.main-header-one__logo-box a img,
+	.main-header-one__logo-box img {
+		max-height: 40px;
+	}
+	.mobile-menu .nav-logo img {
+		max-height: 38px;
+		max-width: 160px;
+	}
+	.footer-widget__logo a img,
+	.footer-widget__logo img {
+		max-height: 38px;
+		max-width: 160px;
+	}
+}

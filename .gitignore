@@ -1,0 +1,22 @@
+# Dependencias y build ofuscado
+site/node_modules/
+site/dist/
+
+# Recursos fuente (muy pesados para Git; site/ ya tiene copias en site/images/recursos y site/videos/)
+Recursos/
+
+# Vídeos fuente .mov en site (solo se despliega el .mp4 del hero)
+site/videos/*.mov
+
+# Backups locales (no subir al repo)
+site/images/.backup-recursos-*/
+site/images/recursos-opt/
+
+# Logs y caché
+*.log
+.npm/
+.eslintcache
+
+# Sistema
+.DS_Store
+Thumbs.db
