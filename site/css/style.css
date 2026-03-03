@@ -109,14 +109,36 @@ Lizar Business HTML Template
 ***/
 
 
-/* Sticy Header */
-.want-sticky-header .main-header.fixed-header {
-	position: relative !important;
-	display: none;
+/* Consultora: subtítulos y textos de sección */
+.feature-one__subtitle {
+	text-align: center;
+	color: rgba(255,255,255,0.9);
+	font-size: 18px;
+	line-height: 1.5;
+	margin: -20px 0 24px;
+}
+.section-title__text {
+	margin-top: 12px;
+	color: rgba(255,255,255,0.85);
+	font-size: 16px;
+	line-height: 1.5;
 }
 
+/* Consultora: ocultar barra de navegación en escritorio; solo visible en tablet y móvil */
+@media only screen and (min-width: 992px) {
+	.main-header.main-header-one {
+		display: none !important;
+	}
+	.feature-one {
+		padding-top: 48px;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.main-header.main-header-one {
+		display: block !important;
+	}
+}
 
-/* Box Layout */
 .box-layout .page-wrapper {
 	max-width: 1390px;
 	width: 100%;
@@ -146,21 +168,6 @@ Lizar Business HTML Template
 
 .box-layout .main-header-two__inner {
 	margin: 0 0px;
-}
-
-/* Consultora: subtítulos y textos de sección */
-.feature-one__subtitle {
-	text-align: center;
-	color: rgba(255,255,255,0.9);
-	font-size: 18px;
-	line-height: 1.5;
-	margin: -20px 0 24px;
-}
-.section-title__text {
-	margin-top: 12px;
-	color: rgba(255,255,255,0.85);
-	font-size: 16px;
-	line-height: 1.5;
 }
 
 /* Iconos Font Awesome en feature-one y solutions-one (sustitutos de imágenes) */
